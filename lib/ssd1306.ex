@@ -10,7 +10,7 @@ defmodule SSD1306 do
   @ssd1306_i2c_address 0x3C
   @ssd1306_setcontrast 0x81
   @ssd1306_displayallon_resume 0xA4
-  @ssd1306_displayallon 0xA5
+  # @ssd1306_displayallon 0xA5
   @ssd1306_normaldisplay 0xA6
   @ssd1306_invertdisplay 0xA7
   @ssd1306_displayoff 0xAE
@@ -21,18 +21,18 @@ defmodule SSD1306 do
   @ssd1306_setdisplayclockdiv 0xD5
   @ssd1306_setprecharge 0xD9
   @ssd1306_setmultiplex 0xA8
-  @ssd1306_setlowcolumn 0x00
-  @ssd1306_sethighcolumn 0x10
+  # @ssd1306_setlowcolumn 0x00
+  # @ssd1306_sethighcolumn 0x10
   @ssd1306_setstartline 0x40
   @ssd1306_memorymode 0x20
   @ssd1306_columnaddr 0x21
   @ssd1306_pageaddr 0x22
-  @ssd1306_comscaninc 0xC0
+  # @ssd1306_comscaninc 0xC0
   @ssd1306_comscandec 0xC8
   @ssd1306_segremap 0xA0
   @ssd1306_chargepump 0x8D
-  @ssd1306_externalvcc 0x1
-  @ssd1306_switchcapvcc 0x2
+  # @ssd1306_externalvcc 0x1
+  # @ssd1306_switchcapvcc 0x2
 
   def command(i2c, data) do
     I2C.write!(i2c, @ssd1306_i2c_address, <<0x00, data>>)
